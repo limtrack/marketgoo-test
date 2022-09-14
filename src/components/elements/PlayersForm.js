@@ -6,6 +6,8 @@ import * as PlayersActions from '../../store/players/actions';
 import useActions from '../../hooks/UseActions';
 // Form validations
 import { useForm } from 'react-hook-form';
+// Components
+import { Button } from "@marketgoo/ola";
 
 /**
  * Component to create new players (Formulary)
@@ -30,7 +32,7 @@ const PlayersForm = () => {
     // Reset form
     reset()
     // TODO - a handler more "cool" for the success messages
-    alert('Player added') 
+    console.log('Player added') 
   }
   
 
@@ -55,7 +57,7 @@ const PlayersForm = () => {
         { ...register('score', { required: { value: true, message: 'Required field' } }) }
       />
       { errors.score ? (<span>{ errors.score.message } </span>) : null }
-      <button type="submit">Add</button>
+      <Button variant="primary" type="submit">Add</Button>
     </form>
   );
 }

@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 // Styles
+import '@marketgoo/ola/dist/index.css';
 import './index.css';
 // Socket
 import './socket';
