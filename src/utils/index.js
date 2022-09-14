@@ -1,15 +1,8 @@
-// Constants
-import { API_URL } from '../constants'
+// Config
+import { API_URL } from '../config'
 // Libs
 import axios from 'axios'
 import { get, merge } from 'lodash'
-
-/**
- * Agrupa clases CSS para montar los atributos "classNames"
- */
-export function setClassNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 /**
  * Make a request API
@@ -44,24 +37,5 @@ export async function makeRequest(request = {}) {
   }
 
   return data
-}
-
-/**
- * Transform string to number
- * 
- * @param {Number | String} value - value to transform
- * @return {Number}
- */
-export function stringToNumber(value) {
-  if (
-    typeof value !== 'string' ||
-    (typeof value === 'string' && value === '')
-  ) {
-    return value
-  }
-
-  const parseNumber = Number.parseFloat(value.replace(/,/gi, '.'))
-
-  return Number.isNaN(parseNumber) ? value : parseNumber
 }
 

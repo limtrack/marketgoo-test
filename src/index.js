@@ -8,17 +8,19 @@ import store from './store';
 import './index.css';
 // Socket
 import './socket';
+// Components
+import Players from './components/Players';
 
-import List from './components/List';
+// Root component
+const Root = () => {
+    return (
+      <Provider store={store}>
+       <h1>League Champion</h1>
+       <Players />
+     </Provider>
+    )
+}
 
-// Load Root DOM
-const app = ReactDOM.createRoot(
-  document.getElementById('app')
-);
-
-app.render(
-    <Provider store={store}>
-        <h1>League Champion</h1>
-        <List />
-    </Provider>
-);
+// Render root
+const app = document.getElementById('app');
+ReactDOM.render( <Root />, app );

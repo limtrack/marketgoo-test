@@ -19,6 +19,7 @@
     "node-cron": "^2.0.3",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-hook-form": "^7.35.0",
     "react-redux": "^8.0.2",
     "redux-saga": "^1.2.1",
     "sequelize": "^5.22.5",
