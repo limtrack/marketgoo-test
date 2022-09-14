@@ -1,0 +1,53 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+}
+
+form > div {
+  margin: 4px 0;
+}
+
+form > div > input {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  border: 1px solid #DDD;
+  border-radius: 0.375rem;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+}
+
+form > div > input.error {
+  border-color: #dc2626;
+}
+
+form > div > input + span {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: 0.5rem;
+  display: block;
+  color: #6b7280;
+}
+
+form > div > input + span.error {
+  color: #dc2626;
+}
+
+form > div > button {
+  color: #FFF;
+  line-height: 1rem;
+  font-weight: 500;
+  font-size: .875rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: #4f46dc;
+  border-radius: .375rem;
+  border: 1px solid transparent;
+}

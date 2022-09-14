@@ -1,5 +1,7 @@
+// React
 import React from "react";
-
+// Styles
+import './table.css';
 /**
  * Simple component to draw a table
  */

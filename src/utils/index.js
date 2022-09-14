@@ -5,6 +5,16 @@ import axios from 'axios'
 import { get, merge } from 'lodash'
 
 /**
+ * Concat CSS classes
+ *
+ * @param {Array} classes - CSS clases
+ * @return {String}
+ */
+ export function setClassNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+/**
  * Make a request API
  * 
  * @param {Object} request - request options
