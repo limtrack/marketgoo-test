@@ -1,24 +1,24 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom';
-import socketIOClient from "socket.io-client";
-const ENDPOINT = 'http://localhost:3000';
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+// Styles
 import './index.css';
+// Socket
+import './socket';
 
 import List from './components/List';
 
-const Root = () => {
-    return (
-        <>
-            <h1>League Champion</h1>
-            <List />
-        </>
-    )
-}
+// Load Root DOM
+const app = ReactDOM.createRoot(
+  document.getElementById('app')
+);
 
-const container = document.getElementById('app');
-ReactDOM.render( <Root />, container );
-
-const socket = socketIOClient(ENDPOINT);
-socket.on("update/players", data => {
-    console.log(data);
-})
+app.render(
+    <Provider store={store}>
+        <h1>League Champion</h1>
+        <List />
+    </Provider>
+);
