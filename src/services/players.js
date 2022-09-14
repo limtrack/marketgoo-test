@@ -39,8 +39,7 @@ export async function getManyPlayers() {
  export async function deletePlayerById(id = null) {
   const result = await makeRequest({
     method: 'delete',
-    url: `players/${id}`,
-    data
+    url: `players/${id}`
   })
 
   return result

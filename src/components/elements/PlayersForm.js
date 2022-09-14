@@ -15,7 +15,7 @@ const PlayersForm = () => {
   // Reducers' actions
   const playersActions = useActions(PlayersActions);
   // Form validations
-  const { handleSubmit, formState: { errors }, register } = useForm();
+  const { handleSubmit, formState: { errors }, register, reset } = useForm();
 
   // METHODS
 
@@ -27,6 +27,8 @@ const PlayersForm = () => {
   async function handleOnSubmit(data) {
     // Create player in server
     playersActions.createPlayerInServer(data)
+    // Reset form
+    reset()
     // TODO - a handler more "cool" for the success messages
     alert('Player added') 
   }

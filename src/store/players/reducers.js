@@ -21,7 +21,7 @@ const playersReducer = (state = players, action) => {
   switch (type) {
     case CREATE_PLAYER: {
       return !isNil(payload) && typeof payload === 'object'
-        ? [...state, { payload }]
+        ? [...state, payload]
         : state;
     }
     case DELETE_PLAYER: {
@@ -30,12 +30,9 @@ const playersReducer = (state = players, action) => {
       }
 
       // found and remove
-      const index = state.indexOf(payload.id);
-      if (index > -1) {
-        state.splice(index, 1);
-      }
-
-      return state;
+      return state.filter((player) => {
+        return player.id !== payload.id
+      });
     }
     case SET_PLAYERS: {
       return !isNil(payload) && Array.isArray(payload)

@@ -30,7 +30,7 @@ export async function makeRequest(request = {}) {
   }
 
   // Get results
-  const { status = 'ok', data = [] } = await axios(currentOptions)
+  const { data: { data = null, status = 'ok' } } = await axios(currentOptions)
 
   if (status !== 'ok') {
     throw new Error('Request error')  
