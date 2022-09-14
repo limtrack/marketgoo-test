@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 // Styles
-// import '@marketgoo/ola/dist/index.css'; <-- No he conseguido cargalo correctamente
+import '@marketgoo/ola/dist/index.css'; // <-- Aunque se incluye en el fichero main.css, Chrome no carga los estilos
 import './index.css';
 // Socket
 import './socket';
